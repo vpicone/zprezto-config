@@ -1,0 +1,27 @@
+#
+# Executes commands at the start of an interactive session.
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#
+
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
+
+# Customize to your needs...
+
+prompt_context() {
+  # local user=`whoami`
+
+  # if [[ "$user" != "$DEFAULT_USER" || -n "$SSH_CONNECTION" ]]; then
+  #   prompt_segment $PRIMARY_FG default " %(!.%{%F{yellow}%}.)$user@%m "
+  # fi
+
+  prompt_segment $PRIMARY_FG default  "  ⬢  "
+}
+
+prompt_dir() {
+  prompt_segment blue $PRIMARY_FG ' %c '
+}
